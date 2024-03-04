@@ -3,6 +3,11 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase contiene dos atributos y define un contacto de agenda
+ * @author 1º DAM ENTORNOS DE DESARROLLO
+ * @version 04/03/2024
+ */
 class Contacto {
     private String name;
     private List<String> phones;
