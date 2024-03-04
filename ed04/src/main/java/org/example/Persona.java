@@ -8,7 +8,7 @@ import java.util.List;
  * @author 1º DAM ENTORNOS DE DESARROLLO
  * @version 1.0 04/03/2024
  */
-class Contacto {
+class Persona {
     private String name;
     private List<String> phones;
 
@@ -18,7 +18,7 @@ class Contacto {
      * @param phone String recibe los numeros de contacto
      *
      */
-    public Contacto(String name, String phone) {
+    public Persona(String name, String phone) {
         this.setName(name);
         this.setPhones(new ArrayList<>());
         this.getPhones().add(phone);

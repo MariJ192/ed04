@@ -3,30 +3,30 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         // Crear una nueva agendaContactos.
-        Agenda agendaContactos = new Agenda();
+        Agenda agendacontactos = new Agenda();
 
         // Añadir contactos a la agendaContactos.
-        agendaContactos.addContact("John Doe", "1234567890");
-        agendaContactos.addContact("Jane Doe", "9876543210");
-        agendaContactos.addContact("Mary Jane", "1122334455");
+        agendacontactos.addContact("John Doe", "1234567890");
+        agendacontactos.addContact("Jane Doe", "9876543210");
+        agendacontactos.addContact("Mary Jane", "1122334455");
 
         // Imprimir todos los contactos de la agendaContactos.
         System.out.println("Todos los contactos: ");
-        for (Contacto c : agendaContactos.getContacts()) {
+        for (Persona c : agendacontactos.getContacts()) {
             System.out.println(c.getName() + " -> " + c.getPhones());
         }
 
         // Añadir un nuevo teléfono a un contacto existente.
-        agendaContactos.addContact("John Doe", "6543219876");
+        agendacontactos.addContact("John Doe", "6543219876");
 
         // Eliminar un contacto de la agendaContactos.
-        agendaContactos.removeContact("Jane Doe");
+        agendacontactos.removeContact("Jane Doe");
 
         // Modificar el teléfono de un contacto existente en la agendaContactos.
-        agendaContactos.modifyPhoneNumber("John Doe", "1234567890", "6666666666");
+        agendacontactos.modifyPhoneNumber("John Doe", "1234567890", "6666666666");
 
         System.out.println("\nDespués de añadir, eliminar y modificar contactos: ");
-        for (Contacto c : agendaContactos.getContacts()) {
+        for (Persona c : agendacontactos.getContacts()) {
             System.out.println(c.getName() + " -> " + c.getPhones());
         }
     }
