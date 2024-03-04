@@ -2,13 +2,27 @@ package org.example;
 
 import java.util.*;
 
+/**
+ * Esta clase contiene solo un atributo, que consiste en una lista de contactos
+ * @author 1º DAM ENTORNOS DE DESARROLLO
+ * @version 1.0 04/03/2024
+ * @see Contacto
+ */
 public class Agenda {
     private List<Contacto> contacts; // Lista de Contacto
 
+    /**
+     * Constructor sin parametros que muestra la lista de contactos
+     */
     public Agenda() {
         this.contacts = new ArrayList<>();
     }
 
+    /**
+     * Metodo para añadir un contacto a la lista,comprueba si existe para no añadirlo y si no existe se añade
+     * @param name String que comprueba si el nomnbre existe en la lista
+     * @param phone String que añade el numero a la lista si no existe
+     */
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
@@ -25,6 +39,10 @@ public class Agenda {
         }
     }
 
+    /**
+     * Metodo para eliminar un contacto
+     * @param name String que recibe para eliminar el contacto de la lista
+     */
     public void removeContact(String name) {
         Iterator<Contacto> it = contacts.iterator();
 
@@ -37,6 +55,12 @@ public class Agenda {
         }
     }
 
+    /**
+     * Metodo para modificar el numero de un contacto
+     * @param name String que recibe el nombre a modificar
+     * @param oldPhone String que recibe el contacto a eliminar
+     * @param newPhone String que recibe el contacto a insertar
+     */
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Contacto c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -51,6 +75,10 @@ public class Agenda {
         }
     }
 
+    /**
+     *
+     * @return devuelve un contacto
+     */
     public List<Contacto> getContacts() {
         return this.contacts;
     }
